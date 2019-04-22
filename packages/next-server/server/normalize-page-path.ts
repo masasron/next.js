@@ -13,5 +13,5 @@ export function normalizePagePath(page: string): string {
   if (page !== resolvedPage) {
     throw new Error('Requested and resolved page mismatch')
   }
-  return page
+  return decodeURIComponent(page)
 }
